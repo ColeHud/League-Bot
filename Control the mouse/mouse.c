@@ -1,60 +1,80 @@
 #include <ApplicationServices/ApplicationServices.h>
 #include <unistd.h>
 
-int main() {
-    // Move to 200x200
-    CGEventRef move1 = CGEventCreateMouseEvent(
+int rightClickLocation(int x, int y)
+{
+    //move
+    CGEventRef move = CGEventCreateMouseEvent(
         NULL, kCGEventMouseMoved,
-        CGPointMake(0, 0),
-        kCGMouseButtonLeft // ignored
-    );
-    // Move to 250x250
-    CGEventRef move2 = CGEventCreateMouseEvent(
-        NULL, kCGEventMouseMoved,
-        CGPointMake(1439, 0),
+        CGPointMake(x, y),
         kCGMouseButtonLeft // ignored
     );
 
-    CGEventRef move3 = CGEventCreateMouseEvent(
+    CGEventPost(kCGHIDEventTap, move);
+
+    CFRelease(move);
+
+    //click
+    CGEventRef click2_down = CGEventCreateMouseEvent(
+        NULL, kCGEventRightMouseDown,
+        CGPointMake(x, y),
+        kCGMouseButtonRight
+    );
+
+    CGEventRef click2_up = CGEventCreateMouseEvent(
+        NULL, kCGEventRightMouseUp,
+        CGPointMake(x, y),
+        kCGMouseButtonRight
+    );
+
+    CGEventPost(kCGHIDEventTap, click2_down);
+    CGEventPost(kCGHIDEventTap, click2_up);
+
+    CFRelease(click2_up);
+    CFRelease(click2_down);
+
+    return 0;
+}
+
+int leftClickLocation(int x, int y)
+{
+    //move
+    CGEventRef move = CGEventCreateMouseEvent(
         NULL, kCGEventMouseMoved,
-        CGPointMake(1439, 899),
+        CGPointMake(x, y),
         kCGMouseButtonLeft // ignored
     );
 
-    CGEventRef move4 = CGEventCreateMouseEvent(
-        NULL, kCGEventMouseMoved,
-        CGPointMake(0, 899),
-        kCGMouseButtonLeft // ignored
+    CGEventPost(kCGHIDEventTap, move);
+
+    CFRelease(move);
+
+    usleep(10000);
+
+    //click
+    CGEventRef click1_down = CGEventCreateMouseEvent(
+        NULL, kCGEventLeftMouseDown,
+        CGPointMake(x, y),
+        kCGMouseButtonLeft
     );
 
-    // Now, execute these events with an interval to make them noticeable
-    CGEventPost(kCGHIDEventTap, move1);
-    sleep(1);
-    CGEventPost(kCGHIDEventTap, move2);
-    sleep(1);
-    CGEventPost(kCGHIDEventTap, move3);
-    sleep(1);
-    CGEventPost(kCGHIDEventTap, move4);
-    sleep(1);
+    CGEventRef click1_up = CGEventCreateMouseEvent(
+        NULL, kCGEventLeftMouseUp,
+        CGPointMake(x, y),
+        kCGMouseButtonLeft
+    );
 
-
-    /*
-    CGEventPost(kCGHIDEventTap, move2);
-    sleep(1);
     CGEventPost(kCGHIDEventTap, click1_down);
     CGEventPost(kCGHIDEventTap, click1_up);
-    */
 
-    // Release the events
-    /*
     CFRelease(click1_up);
     CFRelease(click1_down);
-    CFRelease(move2);
-    */
-    CFRelease(move1);
-    CFRelease(move2);
-    CFRelease(move3);
-    CFRelease(move4);
+    return 0;
+}
+
+int main() {
+    
+    leftClickLocation(30,0);
 
     return 0;
 }
