@@ -80,6 +80,7 @@ int main(int argc, char *argv[])
     int y = atoi(argv[2]);
 
     rightClickLocation(x, y);
+    sleep(1);
 
     return 0;
 }
