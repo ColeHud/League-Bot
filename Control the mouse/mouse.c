@@ -14,6 +14,8 @@ int rightClickLocation(int x, int y)
 
     CFRelease(move);
 
+    usleep(10000);//SLEEP
+
     //click
     CGEventRef click2_down = CGEventCreateMouseEvent(
         NULL, kCGEventRightMouseDown,
@@ -49,7 +51,7 @@ int leftClickLocation(int x, int y)
 
     CFRelease(move);
 
-    usleep(10000);
+    usleep(10000);//SLEEP
 
     //click
     CGEventRef click1_down = CGEventCreateMouseEvent(
@@ -72,9 +74,12 @@ int leftClickLocation(int x, int y)
     return 0;
 }
 
-int main() {
-    
-    leftClickLocation(30,0);
+int main(int argc, char *argv[]) 
+{
+    int x = atoi(argv[1]);
+    int y = atoi(argv[2]);
+
+    leftClickLocation(x, y);
 
     return 0;
 }

@@ -2,6 +2,10 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include <iostream>
 #include <stdio.h>
+#include <string>
+#include <sstream>
+#include <cstdlib>
+#include <fstream>
 
 using namespace std;
 using namespace cv;
@@ -72,6 +76,10 @@ void MatchingMethod( int, void* )
 
   cout << matchLoc.x << endl;
   cout << matchLoc.y << endl;
+
+  string command = "./mouse " + to_string(matchLoc.x) + " " + to_string(matchLoc.y);
+
+  system(command.c_str());
 
   rectangle( img_display, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
   rectangle( result, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
