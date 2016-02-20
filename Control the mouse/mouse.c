@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
     int x = atoi(argv[1]);
     int y = atoi(argv[2]);
 
-    leftClickLocation(x, y);
+    rightClickLocation(x, y);
 
     return 0;
 }
