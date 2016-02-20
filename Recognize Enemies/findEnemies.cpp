@@ -21,8 +21,8 @@ void MatchingMethod( int, void* );
 int main( int argc, char** argv )
 {
   /// Load image and template
-  img = imread( argv[1], 1 );
-  templ = imread( argv[2], 1 );
+  img = imread( "image.png", 1 );
+  templ = imread( "template.jpg", 1 );
 
   /// Create windows
   namedWindow( image_window, CV_WINDOW_AUTOSIZE );
