@@ -11,7 +11,7 @@ Mat img; Mat templ; Mat result;
 char* image_window = "Source Image";
 char* result_window = "Result window";
 
-int match_method;
+int match_method = 4;
 int max_Trackbar = 5;
 
 /// Function Headers
@@ -55,7 +55,7 @@ void MatchingMethod( int, void* )
   result.create( result_rows, result_cols, CV_32FC1 );
 
   /// Do the Matching and Normalize
-  matchTemplate( img, templ, result, match_method );
+  matchTemplate( img, templ, result, /*match method*/ 4);
   normalize( result, result, 0, 1, NORM_MINMAX, -1, Mat() );
 
   /// Localizing the best match with minMaxLoc
@@ -70,9 +70,19 @@ void MatchingMethod( int, void* )
   else
     { matchLoc = maxLoc; }
 
-  /// Show me what you got
+  cout << matchLoc.x << endl;
+  cout << matchLoc.y << endl;
+
   rectangle( img_display, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
   rectangle( result, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
+
+  /* 779    579 */
+  Point somethingElse;
+  somethingElse.x = 779;
+  somethingElse.y = 679;
+  rectangle( img_display, somethingElse, Point( somethingElse.x + templ.cols , somethingElse.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
+
+
 
   imshow( image_window, img_display );
   imshow( result_window, result );
