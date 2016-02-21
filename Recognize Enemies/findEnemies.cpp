@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <ctime>
+#include <stdlib.h>
 
 using namespace std;
 using namespace cv;
@@ -92,12 +93,37 @@ void MatchingMethod( int, void* )
   int y = matchLoc.y + (templ.rows/2);
   
 
-  string command = "./mouse " + to_string(x - 20) + " " + to_string(y + 24);
-
+  //possible moves
+  string command = "./mouse " + to_string(x - 30) + " " + to_string(y + 24);
   string qqq = "./keyboard q";
+  string www = "./keyboard w";
+  string eee = "./keyboard e";
+  string rrr = "./keyboard r";
 
-  system(command.c_str());
-  system(qqq.c_str());
+  //choose what to do
+  int random = rand() % 100;
+
+  if(random >= 0 && random < 2)// 11% r
+  {
+  	system(rrr.c_str());
+  }
+  else if(random >= 20 && random < 100)// right click
+  {
+  	system(command.c_str());
+  }
+  else if(random >= 2 && random < 8)// q
+  {
+  	system(qqq.c_str());
+  }
+  else if(random >= 14 && random < 10)//w
+  {
+  	system(www.c_str());
+  }
+  else if(random >= 16 && random < 20)//e
+  {
+  	system(eee.c_str());
+  }
+  
 
   rectangle( img_display, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
   rectangle( result, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );

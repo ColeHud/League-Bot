@@ -10,8 +10,6 @@ int qKey()
     CGEventPost(kCGHIDEventTap, q);
     CFRelease(q);
 
-    usleep(100000);
-
 	return 0;
 }
 
@@ -23,8 +21,6 @@ int wKey()
 
     CGEventPost(kCGHIDEventTap, w);
     CFRelease(w);
-
-    usleep(100000);
 
 	return 0;
 }
@@ -38,8 +34,6 @@ int eKey()
     CGEventPost(kCGHIDEventTap, e);
     CFRelease(e);
 
-    usleep(100000);
-
 	return 0;
 }
 
@@ -52,7 +46,7 @@ int rKey()
     CGEventPost(kCGHIDEventTap, r);
     CFRelease(r);
 
-    usleep(100000);
+    //usleep(100000);
 
 	return 0;
 }
