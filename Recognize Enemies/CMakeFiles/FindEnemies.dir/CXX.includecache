@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/findEnemies.cpp
+/users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/findEnemies.cpp
 opencv2/highgui/highgui.hpp
-/Users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/opencv2/highgui/highgui.hpp
+/users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/Users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/opencv2/imgproc/imgproc.hpp
+/users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/opencv2/imgproc/imgproc.hpp
 iostream
 -
 stdio.h

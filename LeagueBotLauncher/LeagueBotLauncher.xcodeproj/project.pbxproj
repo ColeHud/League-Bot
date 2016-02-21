@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDC5AD061C79A25200DCA755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5AD051C79A25200DCA755 /* AppDelegate.swift */; };
+		EDC5AD081C79A25200DCA755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5AD071C79A25200DCA755 /* ViewController.swift */; };
+		EDC5AD0A1C79A25200DCA755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC5AD091C79A25200DCA755 /* Assets.xcassets */; };
+		EDC5AD0D1C79A25200DCA755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC5AD0B1C79A25200DCA755 /* Main.storyboard */; };
+		EDC5AD191C79A3B800DCA755 /* keyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC5AD151C79A3B800DCA755 /* keyboard */; };
+		EDC5AD1A1C79A3B800DCA755 /* minion.png in Resources */ = {isa = PBXBuildFile; fileRef = EDC5AD161C79A3B800DCA755 /* minion.png */; };
+		EDC5AD1B1C79A3B800DCA755 /* mouse in Resources */ = {isa = PBXBuildFile; fileRef = EDC5AD171C79A3B800DCA755 /* mouse */; };
+		EDC5AD1E1C7A031600DCA755 /* execute.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC5AD1D1C7A031600DCA755 /* execute.c */; };
+		EDC5AD201C7A062E00DCA755 /* FindEnemies in Resources */ = {isa = PBXBuildFile; fileRef = EDC5AD1F1C7A062E00DCA755 /* FindEnemies */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDC5AD021C79A25200DCA755 /* LeagueBotLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeagueBotLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC5AD051C79A25200DCA755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDC5AD071C79A25200DCA755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDC5AD091C79A25200DCA755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDC5AD0C1C79A25200DCA755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDC5AD0E1C79A25200DCA755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC5AD151C79A3B800DCA755 /* keyboard */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = keyboard; sourceTree = "<group>"; };
+		EDC5AD161C79A3B800DCA755 /* minion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minion.png; sourceTree = "<group>"; };
+		EDC5AD171C79A3B800DCA755 /* mouse */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mouse; sourceTree = "<group>"; };
+		EDC5AD1C1C7A031600DCA755 /* LeagueBotLauncher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeagueBotLauncher-Bridging-Header.h"; sourceTree = "<group>"; };
+		EDC5AD1D1C7A031600DCA755 /* execute.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = execute.c; sourceTree = "<group>"; };
+		EDC5AD1F1C7A062E00DCA755 /* FindEnemies */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = FindEnemies; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDC5ACFF1C79A25200DCA755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDC5ACF91C79A25200DCA755 = {
+			isa = PBXGroup;
+			children = (
+				EDC5AD1F1C7A062E00DCA755 /* FindEnemies */,
+				EDC5AD151C79A3B800DCA755 /* keyboard */,
+				EDC5AD161C79A3B800DCA755 /* minion.png */,
+				EDC5AD171C79A3B800DCA755 /* mouse */,
+				EDC5AD041C79A25200DCA755 /* LeagueBotLauncher */,
+				EDC5AD031C79A25200DCA755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDC5AD031C79A25200DCA755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDC5AD021C79A25200DCA755 /* LeagueBotLauncher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDC5AD041C79A25200DCA755 /* LeagueBotLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				EDC5AD051C79A25200DCA755 /* AppDelegate.swift */,
+				EDC5AD071C79A25200DCA755 /* ViewController.swift */,
+				EDC5AD1D1C7A031600DCA755 /* execute.c */,
+				EDC5AD091C79A25200DCA755 /* Assets.xcassets */,
+				EDC5AD0B1C79A25200DCA755 /* Main.storyboard */,
+				EDC5AD0E1C79A25200DCA755 /* Info.plist */,
+				EDC5AD1C1C7A031600DCA755 /* LeagueBotLauncher-Bridging-Header.h */,
+			);
+			path = LeagueBotLauncher;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDC5AD011C79A25200DCA755 /* LeagueBotLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDC5AD111C79A25200DCA755 /* Build configuration list for PBXNativeTarget "LeagueBotLauncher" */;
+			buildPhases = (
+				EDC5ACFE1C79A25200DCA755 /* Sources */,
+				EDC5ACFF1C79A25200DCA755 /* Frameworks */,
+				EDC5AD001C79A25200DCA755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeagueBotLauncher;
+			productName = LeagueBotLauncher;
+			productReference = EDC5AD021C79A25200DCA755 /* LeagueBotLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDC5ACFA1C79A25200DCA755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = mhacks7dreamteam;
+				TargetAttributes = {
+					EDC5AD011C79A25200DCA755 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EDC5ACFD1C79A25200DCA755 /* Build configuration list for PBXProject "LeagueBotLauncher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDC5ACF91C79A25200DCA755;
+			productRefGroup = EDC5AD031C79A25200DCA755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDC5AD011C79A25200DCA755 /* LeagueBotLauncher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDC5AD001C79A25200DCA755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDC5AD1B1C79A3B800DCA755 /* mouse in Resources */,
+				EDC5AD1A1C79A3B800DCA755 /* minion.png in Resources */,
+				EDC5AD0A1C79A25200DCA755 /* Assets.xcassets in Resources */,
+				EDC5AD191C79A3B800DCA755 /* keyboard in Resources */,
+				EDC5AD201C7A062E00DCA755 /* FindEnemies in Resources */,
+				EDC5AD0D1C79A25200DCA755 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDC5ACFE1C79A25200DCA755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDC5AD081C79A25200DCA755 /* ViewController.swift in Sources */,
+				EDC5AD1E1C7A031600DCA755 /* execute.c in Sources */,
+				EDC5AD061C79A25200DCA755 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDC5AD0B1C79A25200DCA755 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDC5AD0C1C79A25200DCA755 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDC5AD0F1C79A25200DCA755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDC5AD101C79A25200DCA755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EDC5AD121C79A25200DCA755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeagueBotLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colehudson.LeagueBotLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeagueBotLauncher/LeagueBotLauncher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDC5AD131C79A25200DCA755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LeagueBotLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colehudson.LeagueBotLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeagueBotLauncher/LeagueBotLauncher-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDC5ACFD1C79A25200DCA755 /* Build configuration list for PBXProject "LeagueBotLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDC5AD0F1C79A25200DCA755 /* Debug */,
+				EDC5AD101C79A25200DCA755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDC5AD111C79A25200DCA755 /* Build configuration list for PBXNativeTarget "LeagueBotLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDC5AD121C79A25200DCA755 /* Debug */,
+				EDC5AD131C79A25200DCA755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDC5ACFA1C79A25200DCA755 /* Project object */;
+}

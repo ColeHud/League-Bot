@@ -38,7 +38,7 @@ int main( int argc, char** argv )
   while(true)
   {
   	//get screen from computer
-  	system("screencapture -x ~/Desktop/Hackathons/MHacks\\ 7/League\\ Bot/Recognize\\ Enemies/screenshot.jpg");
+  	system("screencapture -x screenshot.jpg");
   	img = imread( "screenshot.jpg", 1 );
 
   	/// Create Trackbar

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies
+# Install script for directory: /users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/users/Cole/Desktop/Hackathons/MHacks 7/League Bot/Recognize Enemies/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
