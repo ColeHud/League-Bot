@@ -101,25 +101,23 @@ void MatchingMethod( int, void* )
   string rrr = "./keyboard r";
 
   //choose what to do
+  system(command.c_str());//auto
+
   int random = rand() % 100;
 
-  if(random >= 0 && random < 2)// 11% r
+  if(random >= 0 && random < 10)// 11% r
   {
   	system(rrr.c_str());
   }
-  else if(random >= 20 && random < 100)// right click
-  {
-  	system(command.c_str());
-  }
-  else if(random >= 2 && random < 8)// q
+  else if(random >= 10 && random < 40)// q
   {
   	system(qqq.c_str());
   }
-  else if(random >= 14 && random < 10)//w
+  else if(random >= 40 && random < 70)//w
   {
   	system(www.c_str());
   }
-  else if(random >= 16 && random < 20)//e
+  else if(random >= 70 && random < 100)//e
   {
   	system(eee.c_str());
   }
