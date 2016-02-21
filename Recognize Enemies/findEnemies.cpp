@@ -6,6 +6,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <fstream>
+#include <ctime>
 
 using namespace std;
 using namespace cv;
@@ -15,7 +16,7 @@ Mat img; Mat templ; Mat result;
 char* image_window = "Source Image";
 char* result_window = "Result window";
 
-int match_method = 3;
+int match_method = 1;
 int max_Trackbar = 5;
 
 /// Function Headers
@@ -31,19 +32,22 @@ int main( int argc, char** argv )
   namedWindow( image_window, CV_WINDOW_AUTOSIZE );
   namedWindow( result_window, CV_WINDOW_AUTOSIZE );
 
-  sleep(10);
+  sleep(5);
 
-  //get screen from computer
-  system("screencapture -x ~/Desktop/Hackathons/MHacks\\ 7/League\\ Bot/Recognize\\ Enemies/screenshot.jpg");
-  img = imread( "screenshot.jpg", 1 );
+  while(true)
+  {
+  	//get screen from computer
+  	system("screencapture -x ~/Desktop/Hackathons/MHacks\\ 7/League\\ Bot/Recognize\\ Enemies/screenshot.jpg");
+  	img = imread( "screenshot.jpg", 1 );
 
-  /// Create Trackbar
-  char* trackbar_label = "Method: \n 0: SQDIFF \n 1: SQDIFF NORMED \n 2: TM CCORR \n 3: TM CCORR NORMED \n 4: TM COEFF \n 5: TM COEFF NORMED";
-  createTrackbar( trackbar_label, image_window, &match_method, max_Trackbar, MatchingMethod );
+  	/// Create Trackbar
+  	char* trackbar_label = "Method: \n 0: SQDIFF \n 1: SQDIFF NORMED \n 2: TM CCORR \n 3: TM CCORR NORMED \n 4: TM COEFF \n 5: TM COEFF NORMED";
+  	createTrackbar( trackbar_label, image_window, &match_method, max_Trackbar, MatchingMethod );
 
-  MatchingMethod( 0, 0 );
-
-  waitKey(0);
+  	MatchingMethod( 0, 0 );
+  	sleep(1);
+  }
+  
 
   return 0;
 }
@@ -65,7 +69,7 @@ void MatchingMethod( int, void* )
   result.create( result_rows, result_cols, CV_32FC1 );
 
   /// Do the Matching and Normalize
-  matchTemplate( img, templ, result, /*type*/3);
+  matchTemplate( img, templ, result, match_method);
   normalize( result, result, 0, 1, NORM_MINMAX, -1, Mat() );
 
   /// Localizing the best match with minMaxLoc
@@ -88,7 +92,7 @@ void MatchingMethod( int, void* )
   int y = matchLoc.y + (templ.rows/2);
   
 
-  string command = "./mouse " + to_string(x) + " " + to_string(y - 50);
+  string command = "./mouse " + to_string(x) + " " + to_string(y);
 
   system(command.c_str());
 
