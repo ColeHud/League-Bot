@@ -92,9 +92,12 @@ void MatchingMethod( int, void* )
   int y = matchLoc.y + (templ.rows/2);
   
 
-  string command = "./mouse " + to_string(x) + " " + to_string(y);
+  string command = "./mouse " + to_string(x - 20) + " " + to_string(y + 24);
+
+  string qqq = "./keyboard q";
 
   system(command.c_str());
+  system(qqq.c_str());
 
   rectangle( img_display, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
   rectangle( result, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(0), 2, 8, 0 );
