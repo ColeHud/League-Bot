@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E39d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15E39d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8187.4"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -674,6 +674,7 @@
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3pz-gx-KZW">
                                 <rect key="frame" x="89" y="127" width="303" height="17"/>
+                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Welcome to the League of Legends Bot Launcher" id="an6-4g-DyL">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -682,6 +683,7 @@
                             </textField>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U34-c4-yc7">
                                 <rect key="frame" x="204" y="91" width="74" height="32"/>
+                                <animations/>
                                 <buttonCell key="cell" type="push" title="Start!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OfQ-VF-d1r">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -697,6 +699,7 @@
                             <constraint firstItem="3pz-gx-KZW" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="G4M-VJ-Ick"/>
                             <constraint firstItem="U34-c4-yc7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Ot5-fC-VPn"/>
                         </constraints>
+                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

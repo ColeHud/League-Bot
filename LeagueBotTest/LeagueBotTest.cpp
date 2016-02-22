@@ -39,7 +39,7 @@ int main(int argc, char** argv)
 	while (true)
 	{
 		//get screen from computer
-		system("screencapture -x ~/Desktop/Hackathons/MHacks\\ 7/League\\ Bot/Recognize\\ Enemies/screenshot.jpg");
+		system("screencapture -x screenshot.jpg");
 		img = imread("screenshot.jpg", 1);
 
 		/*
@@ -66,6 +66,7 @@ int main(int argc, char** argv)
 
 		/// Load image and template
 		templ = imread("minion.png", 1);
+
 
 		MatchingMethod(0, 0);
 		sleep(1);
@@ -193,38 +194,28 @@ void MatchingMethod(int, void*) //attack minions/champions
 	string eee = "./keyboard e";
 	string rrr = "./keyboard r";
 
-	//choose what to do
-	system(command.c_str()); //auto attack
-	system(qqq.c_str());
-	sleep(5);
-	system(www.c_str());
-	sleep(10);
-	system(eee.c_str());
-	sleep(15);
-	system(rrr.c_str());
-	sleep(60);
+  //choose what to do
+  system(command.c_str());//auto
 
+  int random = rand() % 100;
 
-	/*
-	//Q
-	if (Q > 0)
-	{
-		system(qqq.c_str());
-		sleep(5);
-	}
-
-	//W
-	system(www.c_str());
-	sleep(5);
-
-	//E
-	system(eee.c_str());
-	sleep(15);
-
-	//R
-	system(rrr.c_str());
-	sleep(60);
-	*/
+  if(random >= 0 && random < 10)// 11% r
+  {
+  	system(rrr.c_str());
+  }
+  else if(random >= 10 && random < 40)// q
+  {
+  	system(qqq.c_str());
+  }
+  else if(random >= 40 && random < 70)//w
+  {
+  	system(www.c_str());
+  }
+  else if(random >= 70 && random < 100)//e
+  {
+  	system(eee.c_str());
+  }
+  
 
 
 	rectangle(img_display, matchLoc, Point(matchLoc.x + templ.cols, matchLoc.y + templ.rows), Scalar::all(0), 2, 8, 0);
